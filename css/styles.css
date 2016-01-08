@@ -1,0 +1,646 @@
+* {
+  text-decoration: none; }
+
+h1, h2, h3 {
+  letter-spacing: 0.1em;
+  font-weight: normal; }
+
+h1 {
+  margin-top: 0; }
+
+h2 {
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #83CC5F; }
+  @media screen and (min-width: 84em) {
+    h2 {
+      font-size: 1.5em; } }
+
+h2.hide {
+  visibility: hidden; }
+
+h3 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5em;
+  margin-top: 0.1em;
+  color: #F89900; }
+  @media screen and (min-width: 84em) {
+    h3 {
+      font-size: 2.8em; } }
+
+h4 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.3em;
+  font-weight: normal;
+  letter-spacing: 0.07em; }
+
+p {
+  font-family: "Josefin Sans", sans-serif;
+  color: #202020;
+  line-height: 1.4em; }
+  @media screen and (min-width: 84em) {
+    p {
+      font-size: 1.1em; } }
+
+header #main-nav {
+  background-color: #FFFDED;
+  padding: 0.5em 0; }
+  @media screen and (min-width: 44em) {
+    header #main-nav {
+      display: none; } }
+  header #main-nav .container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    header #main-nav .container .logo {
+      -webkit-flex: 0 0 40%;
+      -ms-flex: 0 0 40%;
+      flex: 0 0 40%;
+      margin-right: 5em; }
+      header #main-nav .container .logo img {
+        width: 100%; }
+    header #main-nav .container #bars {
+      -webkit-flex: 0 0 7%;
+      -ms-flex: 0 0 7%;
+      flex: 0 0 7%;
+      text-align: center;
+      margin-top: 0.2em;
+      cursor: pointer; }
+      header #main-nav .container #bars i {
+        color: #83CC5F;
+        font-size: 1.5em; }
+
+header #main-nav.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2000; }
+
+header #menu-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(131, 204, 95, 0.4);
+  transition: all ease 0.3s;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 5000; }
+  header #menu-overlay #menu-close {
+    position: absolute;
+    top: 1em;
+    right: 2.4em; }
+    header #menu-overlay #menu-close i {
+      font-size: 1.7em;
+      color: #fff; }
+      header #menu-overlay #menu-close i:hover {
+        color: #F89900;
+        cursor: pointer; }
+  header #menu-overlay #nav {
+    height: content;
+    margin: 3em auto;
+    padding: 0;
+    overflow: hidden;
+    text-transform: uppercase;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 2em; }
+    header #menu-overlay #nav ul {
+      text-align: center;
+      padding-left: 0; }
+      header #menu-overlay #nav ul li {
+        list-style-type: none; }
+        header #menu-overlay #nav ul li a {
+          color: #fff;
+          transition: all 0.4s ease; }
+          header #menu-overlay #nav ul li a:hover {
+            color: #F89900; }
+
+header #menu-overlay.fade-in {
+  background-color: rgba(131, 204, 95, 0.9);
+  transition: all ease 0.3s; }
+
+header #menu-overlay.fade-out {
+  background-color: rgba(131, 204, 95, 0.4);
+  transition: all ease 0.3s; }
+
+header #menu-overlay.hide {
+  display: none; }
+
+header #initial-nav {
+  display: none; }
+  @media screen and (min-width: 44em) {
+    header #initial-nav {
+      display: block;
+      background-color: #FFFDED;
+      box-shadow: 0.1em 0.1em 0.3em #ddd; }
+      header #initial-nav .initial-logo {
+        width: 10em;
+        padding: 0.8em 0;
+        margin: 0 auto; }
+        header #initial-nav .initial-logo img {
+          width: 100%; } }
+    @media screen and (min-width: 44em) and (min-width: 64em) {
+      header #initial-nav .initial-logo {
+        width: 12em; } }
+    @media screen and (min-width: 44em) and (min-width: 84em) {
+      header #initial-nav .initial-logo {
+        width: 14em; } }
+
+header #sticky-nav {
+  display: none; }
+  @media screen and (min-width: 44em) {
+    header #sticky-nav {
+      display: block;
+      background-color: #83CC5F;
+      padding: 0.1em 0; }
+      header #sticky-nav .container {
+        width: 70%;
+        margin: 0 auto;
+        position: relative; }
+        header #sticky-nav .container ul {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between;
+          font-family: "Josefin Sans", sans-serif;
+          text-transform: uppercase;
+          font-size: 0.8em;
+          line-height: 0.8em; }
+          header #sticky-nav .container ul li {
+            list-style-type: none; }
+            header #sticky-nav .container ul li a {
+              color: #fff;
+              transition: all 0.4s ease; }
+              header #sticky-nav .container ul li a:hover {
+                color: #F89900; } }
+  @media screen and (min-width: 64em) {
+    header #sticky-nav .container {
+      width: 60%;
+      margin: 0 auto;
+      position: relative; } }
+  @media screen and (min-width: 84em) {
+    header #sticky-nav .container {
+      width: 50%;
+      margin: 0 auto;
+      position: relative; } }
+
+header #sticky-nav.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20000; }
+
+main section {
+  min-height: content; }
+  main section .container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative; }
+    @media screen and (min-width: 84em) {
+      main section .container {
+        width: 70%; } }
+  main section i.fa-leaf {
+    font-size: 1.5em;
+    color: #83CC5F; }
+  main section #hero-intro {
+    width: 100%;
+    height: 100vh;
+    text-align: center; }
+    main section #hero-intro #slider {
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      main section #hero-intro #slider .jc-slider {
+        overflow: hidden;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0; }
+        main section #hero-intro #slider .jc-slider .slide {
+          -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          width: 100%;
+          height: 100%;
+          background-position: top;
+          list-style-type: none;
+          margin: 0;
+          padding: 0; }
+          @media screen and (min-width: 44em) {
+            main section #hero-intro #slider .jc-slider .slide {
+              background-size: cover;
+              background-attachment: fixed; } }
+          main section #hero-intro #slider .jc-slider .slide .container {
+            padding: 3em 0;
+            width: 80%;
+            margin: 0 auto;
+            position: relative; }
+            main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper {
+              margin: 0 auto;
+              text-align: center; }
+              main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper h1, main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper .slider-heading {
+                display: inline-block;
+                font-family: "Great Vibes", cursive;
+                font-size: 2.9em;
+                color: #fff;
+                margin-bottom: 0.2em;
+                padding-top: 1.1em; }
+                @media screen and (min-width: 64em) {
+                  main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper h1, main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper .slider-heading {
+                    font-size: 3.5em; } }
+                @media screen and (min-width: 84em) {
+                  main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper h1, main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper .slider-heading {
+                    font-size: 4em;
+                    padding-top: 1.5em; } }
+              main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper p {
+                font-family: "Josefin Sans", sans-serif;
+                font-size: 1.2em;
+                font-weight: 400;
+                font-style: italic;
+                margin-top: 0;
+                color: #fff; }
+                @media screen and (min-width: 84em) {
+                  main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper p {
+                    font-size: 1.5em; } }
+              main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper .hero-button {
+                border: thin solid #fff;
+                padding: 1em;
+                margin: 0 auto;
+                margin-top: 4em;
+                text-transform: uppercase;
+                font-family: "Playfair Display", serif;
+                font-size: 0.8em;
+                width: 14em;
+                transition: all 0.4s ease;
+                border-radius: 0.3em; }
+                main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper .hero-button:hover {
+                  background-color: rgba(255, 255, 255, 0.3); }
+                main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper .hero-button a {
+                  letter-spacing: 0.3em;
+                  color: #fff; }
+                @media screen and (min-width: 84em) {
+                  main section #hero-intro #slider .jc-slider .slide .container .intro-wrapper .hero-button {
+                    padding: 1.3em 2em; } }
+          main section #hero-intro #slider .jc-slider .slide:nth-child(1) {
+            background-image: url("../images/slide1.jpg"); }
+          main section #hero-intro #slider .jc-slider .slide:nth-child(2) {
+            background-image: url("../images/slide2.jpg"); }
+          main section #hero-intro #slider .jc-slider .slide:nth-child(3) {
+            background-image: url("../images/slide3.jpg"); }
+      main section #hero-intro #slider .jc-slider * {
+        box-sizing: border-box; }
+      main section #hero-intro #slider .slides {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0; }
+  main section #about-section {
+    width: 100%;
+    height: content;
+    background-image: url("../images/swirl-bg.png");
+    background-position: top;
+    background-repeat: repeat;
+    padding: 3em 0 0 0;
+    text-align: center; }
+    main section #about-section img {
+      width: 15em;
+      margin-top: 3em; }
+      @media screen and (min-width: 64em) {
+        main section #about-section img {
+          width: 17em; } }
+      @media screen and (min-width: 84em) {
+        main section #about-section img {
+          width: 20em; } }
+    main section #about-section .orange-divider {
+      background-color: #F89900;
+      margin-top: 2em;
+      padding: 0.8em 0; }
+      main section #about-section .orange-divider h4 {
+        color: #fff;
+        font-size: 1.8em;
+        margin: 0.3em 0; }
+        @media screen and (min-width: 64em) {
+          main section #about-section .orange-divider h4 {
+            letter-spacing: 0.3em; } }
+      main section #about-section .orange-divider p {
+        color: #fff; }
+  main section #menu-section {
+    width: 100%;
+    height: content;
+    padding: 3em 0;
+    text-align: center; }
+    main section #menu-section h3 {
+      margin-bottom: 0.1em; }
+    main section #menu-section span {
+      font-size: 1em;
+      font-family: "Josefin Sans", sans-serif;
+      color: #202020; }
+    main section #menu-section img {
+      width: 7em;
+      margin: 2em 0; }
+    main section #menu-section .snack-container .snack-wrapper {
+      margin: 2em 0; }
+      main section #menu-section .snack-container .snack-wrapper:nth-of-type(1) {
+        -webkit-animation-delay: 1s; }
+      main section #menu-section .snack-container .snack-wrapper:nth-of-type(2) {
+        -webkit-animation-delay: 1.25s; }
+      main section #menu-section .snack-container .snack-wrapper:nth-of-type(3) {
+        -webkit-animation-delay: 1.5s; }
+      main section #menu-section .snack-container .snack-wrapper span.snack-title {
+        display: block;
+        font-family: "Josefin Sans", sans-serif;
+        color: #663300;
+        letter-spacing: 0.1em;
+        padding: 0.5em 0; }
+      main section #menu-section .snack-container .snack-wrapper span.snack-price {
+        display: block;
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        color: #83CC5F;
+        letter-spacing: 0.1em; }
+    main section #menu-section .snack-container .snack-wrapper.hide {
+      visibility: hidden; }
+    @media screen and (min-width: 64em) {
+      main section #menu-section .snack-container {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        main section #menu-section .snack-container .snack-wrapper {
+          -webkit-flex: 0 0 30%;
+          -ms-flex: 0 0 30%;
+          flex: 0 0 30%; } }
+  main section #map-section {
+    width: 100%;
+    height: 100vh;
+    padding: 3em 0;
+    text-align: center;
+    position: relative; }
+    main section #map-section #map {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0; }
+  main section #order-section {
+    width: 100%;
+    height: content;
+    padding: 3em 0;
+    text-align: center;
+    font-family: "Josefin Sans", sans-serif; }
+    main section #order-section .bold-italic {
+      font-weight: 600;
+      font-style: italic;
+      color: #83CC5F; }
+    main section #order-section .small-italic {
+      font-style: italic;
+      font-size: 0.9em; }
+    main section #order-section .form-wrapper {
+      border: 0;
+      margin-top: 3em;
+      padding: 2em 0;
+      color: #202020;
+      text-align: left; }
+      main section #order-section .form-wrapper #order-form .field-type {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        margin-bottom: 0.8em; }
+        main section #order-section .form-wrapper #order-form .field-type label {
+          -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          font-weight: 600;
+          margin-bottom: 0.5em;
+          color: #663300; }
+        main section #order-section .form-wrapper #order-form .field-type input, main section #order-section .form-wrapper #order-form .field-type textarea {
+          -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          padding: 0.5em;
+          border: thin solid #ddd;
+          box-sizing: border-box; }
+          main section #order-section .form-wrapper #order-form .field-type input:focus, main section #order-section .form-wrapper #order-form .field-type textarea:focus {
+            outline: none; }
+        main section #order-section .form-wrapper #order-form .field-type textarea {
+          height: 5em; }
+        main section #order-section .form-wrapper #order-form .field-type .flavour-wrapper {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          main section #order-section .form-wrapper #order-form .field-type .flavour-wrapper .form-flavour-title {
+            -webkit-flex: 0 0 55%;
+            -ms-flex: 0 0 55%;
+            flex: 0 0 55%;
+            display: block;
+            font-size: 0.9em;
+            line-height: 2em;
+            margin-right: 2em;
+            margin-bottom: 1em;
+            width: 20em; }
+          main section #order-section .form-wrapper #order-form .field-type .flavour-wrapper input {
+            -webkit-flex: 0 0 15%;
+            -ms-flex: 0 0 15%;
+            flex: 0 0 15%;
+            font-size: 0.8em;
+            max-height: 2em; }
+            @media screen and (min-width: 44em) {
+              main section #order-section .form-wrapper #order-form .field-type .flavour-wrapper input {
+                -webkit-flex: 0 0 9%;
+                -ms-flex: 0 0 9%;
+                flex: 0 0 9%; } }
+            @media screen and (min-width: 64em) {
+              main section #order-section .form-wrapper #order-form .field-type .flavour-wrapper input {
+                -webkit-flex: 0 0 11%;
+                -ms-flex: 0 0 11%;
+                flex: 0 0 11%; } }
+        main section #order-section .form-wrapper #order-form .field-type input[type="submit"] {
+          background-color: #F89900;
+          border: 0;
+          border-radius: 0.3em;
+          color: #fff;
+          font-family: "Playfair Display", serif;
+          letter-spacing: 0.3em;
+          text-transform: uppercase;
+          padding: 0.7em 0;
+          transition: all 0.4s ease; }
+          main section #order-section .form-wrapper #order-form .field-type input[type="submit"]:hover {
+            background-color: #83CC5F; }
+      @media screen and (min-width: 64em) {
+        main section #order-section .form-wrapper #order-form {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+          justify-content: space-between; }
+          main section #order-section .form-wrapper #order-form .field-type {
+            -webkit-flex: 0 0 49%;
+            -ms-flex: 0 0 49%;
+            flex: 0 0 49%; }
+            main section #order-section .form-wrapper #order-form .field-type:nth-of-type(7) input {
+              position: absolute;
+              right: 0;
+              padding: 0.7em 1em;
+              font-size: 0.9em; } }
+      main section #order-section .form-wrapper label.error {
+        position: relative;
+        font-size: 0.7em;
+        bottom: 2em;
+        left: 1em;
+        color: #F89900 !important; }
+      main section #order-section .form-wrapper label#flavour3-error.error {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        font-size: 0.7em;
+        color: #F89900 !important; }
+  main section #contact-section {
+    width: 100%;
+    height: content;
+    padding: 3em 0;
+    text-align: center;
+    background-color: #663300; }
+    main section #contact-section i.fa-leaf, main section #contact-section h2, main section #contact-section h3, main section #contact-section p {
+      color: #fff; }
+    main section #contact-section .contact-wrapper .contact-info-wrapper {
+      margin-top: 3em; }
+      main section #contact-section .contact-wrapper .contact-info-wrapper i.fa-phone,
+      main section #contact-section .contact-wrapper .contact-info-wrapper i.fa-envelope,
+      main section #contact-section .contact-wrapper .contact-info-wrapper .fa-instagram {
+        margin-right: 0.5em; }
+      main section #contact-section .contact-wrapper .contact-info-wrapper .info-details p a {
+        text-decoration: none;
+        color: #fff; }
+    @media screen and (min-width: 64em) {
+      main section #contact-section .contact-wrapper {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        text-align: left;
+        padding: 3em 0; }
+        main section #contact-section .contact-wrapper .contact-intro {
+          -webkit-flex: 0 0 45%;
+          -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+          margin-top: 0; }
+        main section #contact-section .contact-wrapper .contact-info-wrapper {
+          -webkit-flex: 0 0 45%;
+          -ms-flex: 0 0 45%;
+          flex: 0 0 45%;
+          margin-top: 0;
+          padding: 0 2em;
+          border-left: thin dashed #fff; }
+          main section #contact-section .contact-wrapper .contact-info-wrapper .info-details {
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+            justify-content: space-between; }
+            main section #contact-section .contact-wrapper .contact-info-wrapper .info-details p {
+              margin: 0 1em 0.2em 0; } }
+
+footer {
+  background-color: #FFFDED;
+  padding: 1.5em 0;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 0.6em;
+  text-align: center;
+  color: #663300; }
+  footer .container {
+    width: 80%;
+    margin: 0 auto;
+    position: relative; }
+
+/*for tablet - inclusive*/
